@@ -147,7 +147,7 @@ class Client extends Object with event.Emitter {
     case 'a':
       var s = data.substring(1);
       if (s == null) s = '[]';
-      var payload = JSON.decode(s);
+      var payload = json.decode(s);
       for(var i=0; i < payload.length; i++){
           _dispatchMessage(payload[i]);
       }
@@ -155,13 +155,13 @@ class Client extends Object with event.Emitter {
     case 'm':
       var s = data.substring(1);
       if (s == null) s = 'null';
-      var payload = JSON.decode(s);
+      var payload = json.decode(s);
       _dispatchMessage(payload);
       break;
     case 'c':
       var s = data.substring(1);
       if (s == null) s = '[]';
-      var payload = JSON.decode(s);
+      var payload = json.decode(s);
       _didClose(payload[0], payload[1]);
       break;
     case 'h':

@@ -119,9 +119,9 @@ class XHRLocalObject extends AbstractXHRObject {
     }
 }
 
-XHRLocalObjectFactory(method, baseUrl, [payload]) => new XHRLocalObject(method, baseUrl, payload);
+AbstractXHRObject XHRLocalObjectFactory(String method, String baseUrl, [payload]) => new XHRLocalObject(method, baseUrl, payload);
 
-XHRCorsObjectFactory(method, baseUrl, [payload]) => new XHRCorsObject(method, baseUrl, payload);
+AbstractXHRObject XHRCorsObjectFactory(String method, String baseUrl, [payload]) => new XHRCorsObject(method, baseUrl, payload);
 
 // 1. Is natively via XHR
 // 2. Is natively via XDR

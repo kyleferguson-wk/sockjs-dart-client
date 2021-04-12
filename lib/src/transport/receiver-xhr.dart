@@ -36,4 +36,4 @@ part of sockjs_client;
   }
 }
 
-XhrReceiverFactory(String recvUrl, AjaxObjectFactory xhrFactory) => new XhrReceiver(recvUrl, xhrFactory);
+Receiver XhrReceiverFactory(String recvUrl, AjaxObjectFactory xhrFactory) => new XhrReceiver(recvUrl, xhrFactory);
